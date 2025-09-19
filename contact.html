@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fortimark</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            padding: 40px;
+            background-color: var(--background-alt);
+            border-radius: var(--border-radius);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .info-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .info-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+        
+        .info-content p, .info-content a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .info-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 18px;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .social-links a:hover {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            padding: 40px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: var(--transition);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(76, 111, 255, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .map-section {
+            padding: 100px 0;
+            background-color: var(--background-alt);
+        }
+        
+        .map-container {
+            height: 500px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 50px;
+            background-color: var(--background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 24px;
+        }
+        
+        .faq-section {
+            padding: 100px 0;
+        }
+        
+        .faq-grid {
+            margin-top: 50px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 20px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--background-alt);
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px 30px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                order: 2;
+            }
+            
+            .contact-form {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 36px;
+            }
+            
+            .contact-subtitle {
+                font-size: 18px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-item {
+                flex-direction: column;
+            }
+            
+            .info-icon {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            
+            .map-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Fortimark</h1>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="web-development.html">Web Development</a></li>
+                                <li><a href="video-editing.html">Video Editing</a></li>
+                                <li><a href="app-development.html">App Development</a></li>
+                                <li><a href="social-media.html">Social Media Management</a></li>
+                                <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="contact-subtitle">Get in Touch</div>
+            <div class="contact-intro">
+                <p>Have a question or ready to start your next project? We'd love to hear from you. Our team is here to answer your questions and help you achieve your digital goals.</p>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 250H1920V0C1920 0 1810 150 1425 175C1040 200 915 0 550 75C185 150 0 250 0 250Z" fill="var(--background-color)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="info-title">Contact Information</h2>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Our Location</h3>
+                            <p>123 Innovation Drive, Suite 500<br>Tech City, CA 94103, USA</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone Number</h3>
+                            <p><a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+                            <p><a href="tel:+1-888-987-6543">+1 (888) 987-6543</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Address</h3>
+                            <p><a href="mailto:info@fortimark.co">info@fortimark.co</a></p>
+                            <p><a href="mailto:support@fortimark.co">support@fortimark.co</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 3:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Select Service</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="video-editing">Video Editing</option>
+                                    <option value="app-development">App Development</option>
+                                    <option value="social-media">Social Media Management</option>
+                                    <option value="ad-campaigns">Ad Campaigns</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Our Location</span>
+                <h2>Find Us on the Map</h2>
+            </div>
+            <div class="map-container">
+                <i class="fas fa-map-marked-alt"></i> Interactive Map Would Be Embedded Here
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <span>FAQs</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>What services does Fortimark offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Fortimark provides a comprehensive range of digital services including web development, app development, video editing, social media management, and ad campaigns. We work with businesses of all sizes to create customized solutions that meet their specific needs and goals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a typical project take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on the scope and complexity of the work. A simple website might take 4-6 weeks, while a complex web application or e-commerce platform could take 3-6 months. During our initial consultation, we'll provide you with a detailed timeline based on your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your pricing structure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing options including project-based pricing, retainer agreements, and hourly rates. Our pricing is transparent and based on the scope of work, timeline, and resources required. We'll provide you with a detailed proposal and breakdown of costs after our initial consultation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you work with clients outside the United States?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we work with clients globally. Our team is experienced in managing remote collaborations, and we use various tools to ensure smooth communication and project management regardless of geographical locations. We've successfully completed projects for clients across North America, Europe, Asia, and Australia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens after I submit my contact form?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After you submit your contact form, you'll receive an automated confirmation email. Our team will review your inquiry and get back to you within 24-48 business hours to schedule an initial consultation. During this consultation, we'll discuss your needs, answer your questions, and determine the best approach for your project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today to schedule a consultation and take the first step towards achieving your digital goals.</p>
+                <a href="#contactForm" class="btn btn-light">Reach Out Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>Fortimark</h2>
+                    <p>Empowering your brand's digital journey.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="video-editing.html">Video Editing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="social-media.html">Social Media Management</a></li>
+                            <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms and Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fortimark. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="chat-widget">
+            <div class="chat-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span>Need Help? Chat with us</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                
+                if (parent.classList.contains('active')) {
+                    parent.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                    });
+                    parent.classList.add('active');
+                }
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(function() {
+                document.getElementById('contactForm').reset();
+                submitBtn.textContent = 'Message Sent!';
+                
+                setTimeout(function() {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 3000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

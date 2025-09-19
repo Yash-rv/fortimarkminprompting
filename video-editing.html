@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing - Fortimark</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Service Page Specific Styles */
+        .service-hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .service-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-hero-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 28px;
+        }
+        
+        .process-section {
+            padding: 100px 0;
+            background-color: var(--background-alt);
+        }
+        
+        .process-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 70px;
+            left: 35px;
+            height: calc(100% + 30px);
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-color), rgba(76, 111, 255, 0.2));
+        }
+        
+        .process-number {
+            flex: 0 0 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-content {
+            flex: 1;
+            padding-top: 15px;
+        }
+        
+        .process-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .process-content p {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        .portfolio-section {
+            padding: 100px 0;
+            background-color: var(--background-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .portfolio-thumbnail {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: var(--background-alt);
+            overflow: hidden;
+        }
+        
+        .portfolio-thumbnail i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-play {
+            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 1;
+        }
+        
+        .portfolio-info {
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        .portfolio-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .portfolio-info p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 36px;
+            }
+            
+            .service-hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                flex-direction: column;
+            }
+            
+            .process-number {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            
+            .process-step:not(:last-child):after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Fortimark</h1>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="active">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="web-development.html">Web Development</a></li>
+                                <li><a href="video-editing.html" class="active">Video Editing</a></li>
+                                <li><a href="app-development.html">App Development</a></li>
+                                <li><a href="social-media.html">Social Media Management</a></li>
+                                <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Video Editing</h1>
+            <div class="service-hero-subtitle">Lights, Camera, Edit!</div>
+            <div class="service-intro">
+                <p>Welcome to Fortimark Video Magic. Step into a world where imagination meets reality with Fortimark's video editing services. From raw footage to cinematic masterpieces, our skilled editors blend creativity and precision to craft captivating visual stories that leave a lasting impression.</p>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 250H1920V0C1920 0 1810 150 1425 175C1040 200 915 0 550 75C185 150 0 250 0 250Z" fill="var(--background-color)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="service-features">
+        <div class="container">
+            <div class="section-title">
+                <span>Features</span>
+                <h2>What We Offer</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Professional Editing</h3>
+                    <p>Elevate your videos with our professional editing services. Our skilled editors transform raw footage into polished masterpieces, ensuring every frame captures your audience's attention.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Get professional-quality editing at an unbeatable price. We believe in delivering exceptional value without compromising on quality, making professional video editing accessible to businesses of all sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Need your video edited in a hurry? Our fast turnaround times ensure you get your edited video promptly, without sacrificing quality. We understand the importance of meeting deadlines and strive to deliver your edited video quickly and efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rest assured that your video is in good hands. Our quality assurance process ensures that every edit meets our high standards of excellence, guaranteeing a final product that exceeds your expectations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>From striking logos to captivating animated videos and compelling advertisements, we specialize in crafting engaging content. Need attention-grabbing YouTube thumbnails and banners? We've got you covered. Let's bring your brand to life with creative content that stands out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Our Process</span>
+                <h2>How We Work</h2>
+            </div>
+            <div class="process-container">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <h3>Footage Selection</h3>
+                        <p>Selecting the most compelling shots that align with your project's goals and vision. Our keen eye for detail ensures that only the highest-quality footage makes it to the editing room.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <h3>Editing and Assembly</h3>
+                        <p>Once the footage is selected, our skilled editors dive into the creative process, weaving together a seamless narrative that brings your vision to life.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <h3>Visual Enhancement</h3>
+                        <p>With the foundation of your video established, we focus on enhancing its visual appeal to elevate the viewing experience. This includes color correction, special effects, transitions, and more.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <h3>Finalization and Delivery</h3>
+                        <p>As the editing process nears completion, we finalize the project with meticulous attention to detail, ensuring that every aspect meets our high standards of excellence. After your approval, we deliver the finished product in your preferred format.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Portfolio</span>
+                <h2>Our Work</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Corporate Promo</h3>
+                        <p>A dynamic promotional video showcasing company culture and services.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Product Launch</h3>
+                        <p>An engaging video introducing a new tech product to the market.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Social Media Short</h3>
+                        <p>Attention-grabbing short-form content for Instagram and TikTok.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Event Highlight</h3>
+                        <p>A recap video of a major industry conference.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Animated Explainer</h3>
+                        <p>An animated video explaining a complex service in simple terms.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-thumbnail">
+                        <i class="fas fa-film"></i>
+                        <div class="portfolio-play">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Training Video</h3>
+                        <p>Instructional content for employee onboarding and training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Video Content?</h2>
+                <p>Let's create captivating videos that tell your story and engage your audience. Contact us today to discuss your project.</p>
+                <a href="contact.html" class="btn btn-light">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>Fortimark</h2>
+                    <p>Empowering your brand's digital journey.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="video-editing.html">Video Editing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="social-media.html">Social Media Management</a></li>
+                            <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms and Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fortimark. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="chat-widget">
+            <div class="chat-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span>Need Help? Chat with us</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Campaigns - Fortimark</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Service Page Specific Styles */
+        .service-hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .service-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-hero-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: #fff;
+            font-size: 28px;
+        }
+        
+        .process-section {
+            padding: 100px 0;
+            background-color: var(--background-alt);
+        }
+        
+        .process-flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+            padding: 0 50px;
+        }
+        
+        .process-flow:before {
+            content: '';
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, rgba(76, 111, 255, 0.2), var(--primary-color), rgba(76, 111, 255, 0.2));
+        }
+        
+        .process-step {
+            flex: 0 0 20%;
+            max-width: 20%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .process-step p {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+        
+        .case-studies {
+            padding: 100px 0;
+            background-color: var(--background-color);
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .case-item {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .case-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .case-image {
+            height: 200px;
+            background-color: var(--background-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 36px;
+        }
+        
+        .case-content {
+            padding: 30px;
+        }
+        
+        .case-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .case-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .case-stats {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .pricing-section {
+            padding: 100px 0;
+            background-color: var(--background-alt);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .pricing-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        
+        .pricing-features {
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .pricing-features ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-light);
+        }
+        
+        .pricing-features ul li:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 992px) {
+            .process-flow {
+                padding: 0;
+            }
+            
+            .process-step {
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-bottom: 40px;
+            }
+            
+            .process-flow:before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 36px;
+            }
+            
+            .service-hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Fortimark</h1>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="active">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="web-development.html">Web Development</a></li>
+                                <li><a href="video-editing.html">Video Editing</a></li>
+                                <li><a href="app-development.html">App Development</a></li>
+                                <li><a href="social-media.html">Social Media Management</a></li>
+                                <li><a href="ad-campaigns.html" class="active">Ad Campaigns</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Ad Campaigns</h1>
+            <div class="service-hero-subtitle">Elevate Your Reach</div>
+            <div class="service-intro">
+                <p>Welcome to our Ad Campaigns page at Fortimark. We specialize in crafting strategic ad campaigns that ignite brands and drive results. From increasing brand awareness to boosting sales, our tailored approach ensures your message resonates with your audience, driving meaningful engagement and conversions.</p>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 250H1920V0C1920 0 1810 150 1425 175C1040 200 915 0 550 75C185 150 0 250 0 250Z" fill="var(--background-color)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="service-features">
+        <div class="container">
+            <div class="section-title">
+                <span>Features</span>
+                <h2>Our Ad Campaign Services</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Organic Social Media Marketing</h3>
+                    <p>At Fortimark, we believe in building genuine connections with your followers through compelling content and strategic engagement strategies (Instagram, Reddit, Twitter and Discord). From crafting engaging posts to fostering meaningful interactions, our approach focuses on cultivating a loyal community around your brand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google and Meta Ads</h3>
+                    <p>Discover the power of Meta and Google Ad Campaigns with Fortimark. Our expert team crafts targeted campaigns to boost your brand's visibility, drive traffic, and generate leads. Whether it's increasing website visits or raising brand awareness, we deliver measurable results tailored to your goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Performance Marketing</h3>
+                    <p>Elevate your marketing strategy with Performance Marketing. At Fortimark, we focus on driving measurable results and optimizing campaigns for maximum ROI. From pay-per-click advertising to affiliate marketing, our data-driven approach ensures your marketing efforts deliver tangible outcomes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Influencer Marketing</h3>
+                    <p>Leverage the power of social influence with Influencer Marketing. Our team identifies and collaborates with influencers who align with your brand values, creating authentic connections and expanding your reach. Through strategic partnerships, we harness the trust and authority of influencers to drive engagement and conversions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3>Offline Marketing</h3>
+                    <p>Make an impact beyond the digital realm with Offline Marketing. From print ads to event sponsorships, we help you connect with your audience in the physical world. Our creative strategies and integrated approach ensure your brand message resonates across both online and offline channels, maximizing your brand's visibility and engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Our Process</span>
+                <h2>How We Create Effective Campaigns</h2>
+            </div>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Research</h3>
+                    <p>We conduct thorough market and audience research to inform our strategy.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy</h3>
+                    <p>Developing a comprehensive campaign strategy aligned with your goals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Creation</h3>
+                    <p>Crafting compelling ad content that resonates with your target audience.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Implementation</h3>
+                    <p>Launching your campaign across relevant platforms and channels.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>Optimization</h3>
+                    <p>Continuously monitoring and refining to maximize performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <span>Success Stories</span>
+                <h2>Our Case Studies</h2>
+            </div>
+            <div class="case-grid">
+                <div class="case-item">
+                    <div class="case-image">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Retail Brand Expansion</h3>
+                        <p>A multi-channel campaign that helped a retail brand expand their market presence and increase sales both online and in physical stores.</p>
+                        <div class="case-stats">
+                            <div class="stat">
+                                <div class="stat-number">347%</div>
+                                <div class="stat-label">ROI</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">210%</div>
+                                <div class="stat-label">Traffic Increase</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Conversion Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Restaurant Chain Launch</h3>
+                        <p>A comprehensive launch campaign for a new restaurant chain that combined digital advertising with local marketing initiatives.</p>
+                        <div class="case-stats">
+                            <div class="stat">
+                                <div class="stat-number">125K</div>
+                                <div class="stat-label">New Customers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">450%</div>
+                                <div class="stat-label">Social Growth</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">28%</div>
+                                <div class="stat-label">Market Share</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-image">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>SaaS Product Promotion</h3>
+                        <p>A targeted B2B campaign that positioned a SaaS product as an industry leader and generated high-quality leads for the sales team.</p>
+                        <div class="case-stats">
+                            <div class="stat">
+                                <div class="stat-number">189%</div>
+                                <div class="stat-label">Lead Increase</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">67%</div>
+                                <div class="stat-label">Cost Reduction</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">42%</div>
+                                <div class="stat-label">Conversion Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-title">
+                <span>Pricing</span>
+                <h2>Campaign Packages</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Starter</div>
+                    <div class="pricing-price">$1,499<span>/month</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Single Platform Campaign</li>
+                            <li>Basic Audience Targeting</li>
+                            <li>Monthly Performance Reports</li>
+                            <li>Creative Asset Development</li>
+                            <li>Campaign Management</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">Professional</div>
+                    <div class="pricing-price">$2,999<span>/month</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Multi-Platform Campaigns</li>
+                            <li>Advanced Audience Targeting</li>
+                            <li>Bi-Weekly Performance Reports</li>
+                            <li>Enhanced Creative Development</li>
+                            <li>A/B Testing & Optimization</li>
+                            <li>Competitor Analysis</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">Enterprise</div>
+                    <div class="pricing-price">Custom<span>/pricing</span></div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Comprehensive Campaign Strategy</li>
+                            <li>Precision Audience Targeting</li>
+                            <li>Weekly Performance Reports</li>
+                            <li>Premium Creative Assets</li>
+                            <li>Continuous Optimization</li>
+                            <li>Dedicated Account Manager</li>
+                            <li>ROI-Focused Analytics</li>
+                        </ul>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Launch Your Next Campaign?</h2>
+                <p>Let our team of experts create a strategic ad campaign that drives meaningful results for your brand.</p>
+                <a href="contact.html" class="btn btn-light">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>Fortimark</h2>
+                    <p>Empowering your brand's digital journey.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="video-editing.html">Video Editing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="social-media.html">Social Media Management</a></li>
+                            <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms and Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fortimark. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="chat-widget">
+            <div class="chat-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span>Need Help? Chat with us</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

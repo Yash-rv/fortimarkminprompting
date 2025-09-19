@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Fortimark</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Legal Pages Specific Styles */
+        .legal-hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .legal-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-content {
+            padding: 100px 0;
+        }
+        
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-section {
+            margin-bottom: 40px;
+        }
+        
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .legal-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .legal-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .legal-section p, .legal-section ul, .legal-section ol {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .legal-section p:last-child, .legal-section ul:last-child, .legal-section ol:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-section ul, .legal-section ol {
+            padding-left: 20px;
+        }
+        
+        .legal-section ul li, .legal-section ol li {
+            margin-bottom: 10px;
+        }
+        
+        .legal-meta {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .legal-navigation {
+            background-color: var(--background-alt);
+            padding: 20px 0;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .legal-nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .legal-nav-link:hover, .legal-nav-link.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        table th {
+            background-color: var(--background-alt);
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        table td {
+            color: var(--text-light);
+        }
+        
+        table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-hero h1 {
+                font-size: 36px;
+            }
+            
+            .legal-subtitle {
+                font-size: 18px;
+            }
+            
+            .legal-container {
+                padding: 30px;
+            }
+            
+            .legal-nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Fortimark</h1>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="web-development.html">Web Development</a></li>
+                                <li><a href="video-editing.html">Video Editing</a></li>
+                                <li><a href="app-development.html">App Development</a></li>
+                                <li><a href="social-media.html">Social Media Management</a></li>
+                                <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Legal Hero Section -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <div class="legal-subtitle">How We Protect Your Information</div>
+            <div class="legal-intro">
+                <p>At Fortimark, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data.</p>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 250H1920V0C1920 0 1810 150 1425 175C1040 200 915 0 550 75C185 150 0 250 0 250Z" fill="var(--background-color)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Legal Navigation -->
+    <div class="legal-navigation">
+        <div class="container">
+            <div class="legal-nav-container">
+                <a href="terms.html" class="legal-nav-link">Terms and Services</a>
+                <a href="privacy.html" class="legal-nav-link active">Privacy Policy</a>
+                <a href="cancellation.html" class="legal-nav-link">Cancellation Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-container">
+                <div class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>This Privacy Policy describes how Fortimark ("we," "us," or "our") collects, uses, and discloses your personal information when you visit our website at <a href="https://fortimark.co">fortimark.co</a> ("Website") or use our services. This Privacy Policy also explains your rights regarding your personal information and how you can exercise those rights.</p>
+                    <p>By accessing our Website or using our services, you acknowledge that you have read and understand this Privacy Policy. If you do not agree with our policies and practices, please do not use our Website or services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Information We Collect</h2>
+                    <p>We collect several types of information from and about users of our Website and services, including:</p>
+                    <h3>2.1 Personal Information</h3>
+                    <p>Personal information is information that identifies you as an individual. We may collect the following types of personal information:</p>
+                    <ul>
+                        <li>Contact information (such as name, email address, phone number, and mailing address)</li>
+                        <li>Company information (such as company name, job title, and industry)</li>
+                        <li>Payment information (such as credit card details and billing address)</li>
+                        <li>User account information (such as username and password)</li>
+                        <li>Communications and feedback you provide to us</li>
+                    </ul>
+                    <h3>2.2 Usage Information</h3>
+                    <p>We may also collect information about how you use our Website and services, including:</p>
+                    <ul>
+                        <li>Log data (such as IP address, browser type, referring/exit pages, operating system, date/time stamps, and clickstream data)</li>
+                        <li>Device information (such as device type, device ID, and mobile network information)</li>
+                        <li>Usage patterns and preferences</li>
+                        <li>Cookies and similar tracking technologies (as described in our Cookie Policy)</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. How We Collect Information</h2>
+                    <p>We collect information from you in various ways, including:</p>
+                    <ul>
+                        <li><strong>Direct interactions:</strong> When you fill out forms on our Website, correspond with us, or otherwise provide us with your information.</li>
+                        <li><strong>Automated technologies:</strong> When you visit our Website or use our services, we may use cookies, web beacons, and other tracking technologies to collect information about your browsing activities.</li>
+                        <li><strong>Third-party sources:</strong> We may receive information about you from third-party sources, such as business partners, analytics providers, social media platforms, and service providers.</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. How We Use Your Information</h2>
+                    <p>We use the information we collect for various purposes, including:</p>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>Providing our services</td>
+                                <td>To deliver the services you have requested, manage your account, process payments, and communicate with you about your use of our services.</td>
+                            </tr>
+                            <tr>
+                                <td>Improving our Website and services</td>
+                                <td>To analyze usage patterns, diagnose technical problems, enhance the functionality of our Website, and improve our services.</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing and communications</td>
+                                <td>To send you updates, newsletters, marketing communications, and other information that may be of interest to you. You can opt out of receiving marketing communications at any time.</td>
+                            </tr>
+                            <tr>
+                                <td>Customer support</td>
+                                <td>To respond to your inquiries, provide technical support, and address any issues you may have with our Website or services.</td>
+                            </tr>
+                            <tr>
+                                <td>Legal and security purposes</td>
+                                <td>To comply with legal obligations, protect our rights and interests, prevent fraud, and ensure the security of our Website and services.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. How We Share Your Information</h2>
+                    <p>We may share your information with the following categories of recipients:</p>
+                    <ul>
+                        <li><strong>Service providers:</strong> We may share your information with third-party service providers who perform services on our behalf, such as hosting, payment processing, data analysis, and customer support.</li>
+                        <li><strong>Business partners:</strong> We may share your information with our business partners to offer you certain products, services, or promotions.</li>
+                        <li><strong>Legal and regulatory authorities:</strong> We may disclose your information if required by law, regulation, or legal process, or to protect our rights, property, or safety.</li>
+                        <li><strong>Corporate transactions:</strong> In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of the transaction.</li>
+                    </ul>
+                    <p>We do not sell your personal information to third parties.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+                    <p>Some of the security measures we employ include:</p>
+                    <ul>
+                        <li>Encryption of sensitive information</li>
+                        <li>Secure servers and firewalls</li>
+                        <li>Regular security assessments and audits</li>
+                        <li>Access controls and authentication mechanisms</li>
+                        <li>Staff training on data protection and security practices</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. Data Retention</h2>
+                    <p>We retain your personal information for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements. To determine the appropriate retention period, we consider the amount, nature, and sensitivity of the personal information, the potential risk of harm from unauthorized use or disclosure, and the purposes for which we process the information.</p>
+                    <p>In some circumstances, we may anonymize your personal information so that it can no longer be associated with you, in which case we may use such information without further notice to you.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. Your Rights</h2>
+                    <p>Depending on your location, you may have certain rights regarding your personal information. These may include the rights to:</p>
+                    <ul>
+                        <li>Access the personal information we hold about you</li>
+                        <li>Correct inaccurate or incomplete personal information</li>
+                        <li>Request the deletion of your personal information</li>
+                        <li>Restrict or object to the processing of your personal information</li>
+                        <li>Request the transfer of your personal information to another party</li>
+                        <li>Withdraw your consent at any time (where processing is based on consent)</li>
+                    </ul>
+                    <p>To exercise any of these rights, please contact us using the information provided in the "Contact Information" section below. We may need to verify your identity before responding to your request.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>9. Children's Privacy</h2>
+                    <p>Our Website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us, and we will take steps to delete such information.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>10. International Data Transfers</h2>
+                    <p>Your personal information may be transferred to, and processed in, countries other than the country in which you reside. These countries may have data protection laws that are different from the laws of your country.</p>
+                    <p>When we transfer your personal information to other countries, we will take appropriate measures to ensure that your personal information receives an adequate level of protection in the countries to which it is transferred.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>11. Cookie Policy</h2>
+                    <p>We use cookies and similar tracking technologies to collect information about your browsing activities on our Website. Cookies are small text files that are stored on your device when you visit a website. They help us recognize you, remember your preferences, and provide a personalized experience.</p>
+                    <h3>11.1 Types of Cookies We Use</h3>
+                    <ul>
+                        <li><strong>Essential cookies:</strong> These cookies are necessary for the Website to function properly and cannot be turned off in our systems.</li>
+                        <li><strong>Performance cookies:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our Website.</li>
+                        <li><strong>Functionality cookies:</strong> These cookies enable the Website to provide enhanced functionality and personalization.</li>
+                        <li><strong>Targeting cookies:</strong> These cookies may be set through our Website by our advertising partners to build a profile of your interests and show you relevant ads on other websites.</li>
+                    </ul>
+                    <h3>11.2 Managing Cookies</h3>
+                    <p>You can control and manage cookies in various ways. Most web browsers allow you to adjust your cookie settings to accept, reject, or delete cookies. Please note that if you choose to disable cookies, some features of our Website may not function properly.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>12. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will post the revised Privacy Policy on our Website with an updated effective date. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and protect your information.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>13. Contact Information</h2>
+                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+                    <p>Fortimark<br>
+                    Attn: Privacy Officer<br>
+                    123 Innovation Drive, Suite 500<br>
+                    Tech City, CA 94103, USA<br>
+                    Email: privacy@fortimark.co<br>
+                    Phone: +1 (555) 123-4567</p>
+                </div>
+
+                <div class="legal-meta">
+                    <p>Last updated: June 15, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>Fortimark</h2>
+                    <p>Empowering your brand's digital journey.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="video-editing.html">Video Editing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="social-media.html">Social Media Management</a></li>
+                            <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms and Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fortimark. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="chat-widget">
+            <div class="chat-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span>Need Help? Chat with us</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

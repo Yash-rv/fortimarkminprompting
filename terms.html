@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Services - Fortimark</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Legal Pages Specific Styles */
+        .legal-hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .legal-hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .legal-content {
+            padding: 100px 0;
+        }
+        
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-section {
+            margin-bottom: 40px;
+        }
+        
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .legal-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .legal-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .legal-section p, .legal-section ul, .legal-section ol {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .legal-section p:last-child, .legal-section ul:last-child, .legal-section ol:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-section ul, .legal-section ol {
+            padding-left: 20px;
+        }
+        
+        .legal-section ul li, .legal-section ol li {
+            margin-bottom: 10px;
+        }
+        
+        .legal-meta {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .legal-navigation {
+            background-color: var(--background-alt);
+            padding: 20px 0;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+        
+        .legal-nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .legal-nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .legal-nav-link:hover, .legal-nav-link.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-hero h1 {
+                font-size: 36px;
+            }
+            
+            .legal-subtitle {
+                font-size: 18px;
+            }
+            
+            .legal-container {
+                padding: 30px;
+            }
+            
+            .legal-nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Fortimark</h1>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="web-development.html">Web Development</a></li>
+                                <li><a href="video-editing.html">Video Editing</a></li>
+                                <li><a href="app-development.html">App Development</a></li>
+                                <li><a href="social-media.html">Social Media Management</a></li>
+                                <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Legal Hero Section -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Terms and Services</h1>
+            <div class="legal-subtitle">Our Agreement With You</div>
+            <div class="legal-intro">
+                <p>Please read these terms and conditions carefully before using our services. These terms establish the rules and regulations for the use of Fortimark's services.</p>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 250H1920V0C1920 0 1810 150 1425 175C1040 200 915 0 550 75C185 150 0 250 0 250Z" fill="var(--background-color)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Legal Navigation -->
+    <div class="legal-navigation">
+        <div class="container">
+            <div class="legal-nav-container">
+                <a href="terms.html" class="legal-nav-link active">Terms and Services</a>
+                <a href="privacy.html" class="legal-nav-link">Privacy Policy</a>
+                <a href="cancellation.html" class="legal-nav-link">Cancellation Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-container">
+                <div class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>These Terms of Service ("Terms") govern your use of the website located at <a href="https://fortimark.co">fortimark.co</a> ("Website") and any related services provided by Fortimark ("we," "us," or "our"). By accessing our Website or using our services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use our Website or services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Services</h2>
+                    <p>Fortimark provides digital marketing and development services including, but not limited to, web development, app development, video editing, social media management, and ad campaigns. The specific details of the services will be outlined in a separate agreement or statement of work between Fortimark and the client.</p>
+                    <h3>2.1 Service Delivery</h3>
+                    <p>We will make reasonable efforts to deliver our services according to the timelines and specifications agreed upon. However, we cannot guarantee specific results or outcomes from our services.</p>
+                    <h3>2.2 Service Modifications</h3>
+                    <p>We reserve the right to modify, suspend, or discontinue any part of our services at any time. We will provide reasonable notice of any significant changes to our services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Client Responsibilities</h2>
+                    <p>As a client of Fortimark, you agree to:</p>
+                    <ul>
+                        <li>Provide accurate and complete information necessary for the delivery of our services</li>
+                        <li>Respond to requests for information, approvals, or feedback in a timely manner</li>
+                        <li>Review and provide feedback on deliverables within the agreed-upon timeframes</li>
+                        <li>Use our services in compliance with all applicable laws and regulations</li>
+                        <li>Pay all fees and charges associated with our services according to the agreed-upon payment terms</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Intellectual Property</h2>
+                    <h3>4.1 Client Materials</h3>
+                    <p>You retain all rights to any content, data, or materials you provide to us for use in connection with our services ("Client Materials"). You grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, and modify the Client Materials solely for the purpose of providing our services to you.</p>
+                    <h3>4.2 Deliverables</h3>
+                    <p>Upon full payment of all applicable fees, we will assign to you all rights, title, and interest in and to the deliverables specifically created for you as part of our services, except for:</p>
+                    <ul>
+                        <li>Third-party materials incorporated into the deliverables</li>
+                        <li>Our pre-existing materials or tools used in the creation of the deliverables</li>
+                        <li>General knowledge, skills, and experience acquired during the course of providing the services</li>
+                    </ul>
+                    <h3>4.3 Fortimark Materials</h3>
+                    <p>We retain all rights to our pre-existing materials, tools, methodologies, and know-how. We grant you a non-exclusive, non-transferable license to use our pre-existing materials solely in connection with your use of the deliverables.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Payment Terms</h2>
+                    <p>Our fees for services will be outlined in a separate agreement or statement of work. Unless otherwise specified:</p>
+                    <ul>
+                        <li>All fees are quoted in US dollars and are exclusive of applicable taxes</li>
+                        <li>Payment is due within 30 days of the invoice date</li>
+                        <li>Late payments may incur interest charges at the rate of 1.5% per month or the maximum rate permitted by law, whichever is lower</li>
+                        <li>We reserve the right to suspend services if payment is not received according to the agreed-upon terms</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Confidentiality</h2>
+                    <p>Each party agrees to keep confidential any non-public information disclosed by the other party in connection with the services, including business plans, technical specifications, and other proprietary information. This obligation of confidentiality will survive the termination of our services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. Term and Termination</h2>
+                    <p>These Terms will remain in effect until our services are completed or terminated. Either party may terminate the services as specified in the separate agreement or statement of work. Upon termination:</p>
+                    <ul>
+                        <li>You will pay all fees due for services performed up to the date of termination</li>
+                        <li>We will deliver all completed deliverables for which payment has been received</li>
+                        <li>Each party will return or destroy all confidential information of the other party</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>8. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by law, Fortimark shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenue, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+                    <ul>
+                        <li>Your use of or inability to use our services</li>
+                        <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
+                        <li>Any interruption or cessation of transmission to or from our services</li>
+                        <li>Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our services</li>
+                    </ul>
+                    <p>Our total liability for any claims arising under these Terms shall not exceed the amount paid by you to us for the services during the 12 months preceding the claim.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>9. Indemnification</h2>
+                    <p>You agree to defend, indemnify, and hold harmless Fortimark and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including, without limitation, reasonable legal and accounting fees, arising out of or in any way connected with your use of our services or your violation of these Terms.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>10. Governing Law and Jurisdiction</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the federal or state courts located in San Francisco, California.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>11. Changes to Terms</h2>
+                    <p>We reserve the right to modify these Terms at any time. We will provide notice of any significant changes to these Terms by posting the new Terms on our Website and/or sending you an email. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>12. Contact Information</h2>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <p>Fortimark<br>
+                    123 Innovation Drive, Suite 500<br>
+                    Tech City, CA 94103, USA<br>
+                    Email: legal@fortimark.co<br>
+                    Phone: +1 (555) 123-4567</p>
+                </div>
+
+                <div class="legal-meta">
+                    <p>Last updated: June 15, 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h2>Fortimark</h2>
+                    <p>Empowering your brand's digital journey.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#our-services">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="web-development.html">Web Development</a></li>
+                            <li><a href="video-editing.html">Video Editing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="social-media.html">Social Media Management</a></li>
+                            <li><a href="ad-campaigns.html">Ad Campaigns</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="terms.html">Terms and Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="cancellation.html">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fortimark. All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="chat-widget">
+            <div class="chat-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span>Need Help? Chat with us</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
