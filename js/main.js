@@ -50,6 +50,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Adjust dropdown click handler to allow navigation
+    dropdowns.forEach(dropdown => {
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        dropdown.addEventListener('click', function(e) {
+            if (!e.target.closest('a')) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('active');
+            }
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            if (!dropdown.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    });
+
     // Counter Animation
     const counters = document.querySelectorAll('.counter');
     const speed = 200;
